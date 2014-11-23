@@ -1,6 +1,6 @@
 <?php
 
-// check for form submission - if it doesn’t exist then send back to contact form
+// check for form submission - if it doesnï¿½t exist then send back to contact form
 if (!isset($_POST["save"]) || $_POST["save"] != "contact-form") {
 header("Location: .html#rsvp"); exit;
 }
@@ -22,6 +22,7 @@ $email_content .= "Attending:\n\n$attending";
 mail ("contact@ouremail.com", "New Contact Message", $email_content);
 
 // send the user back to the form
-header("Location: index.html#rsvp"); exit;
+//TODO capire per pagine separate
+header("Location: italy.html#rsvp"); exit;
 
 ?>
