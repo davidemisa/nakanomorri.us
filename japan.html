@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Amor - HTML Wedding Template</title>
+	<title>Our wedding in Japan</title>
 	
 	<!-- The Meta --> 
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta name="description" content="Amor - HTML Wedding Template" />
-    <meta name="keywords" content="jquery, css3, html5, animation, mobile, responsive, preview" />
-    <meta name="author" content="Doriana" />
+    <meta name="description" content="Our wedding in Japan" />
+    <meta name="keywords" content="wedding, davide, megumi, morri, nakanomori, nakanomorri, misa" />
+    <meta name="author" content="misa" />
 	
     <link rel="shortcut icon" href="images/favicon.ico" />
 	
@@ -48,14 +48,15 @@
 
 	<!--NAVIGATION (menu left)-->
 	<div class="container">
-	<div class="header-quote">“Happily ever after is not a fairy tale. It’s a choice.”</div>
+    <!--TODO pensare frase in giapponese /en -->
+	<div class="header-quote">“ただの日本語 - Happily ever after is not a fairy tale. It’s a choice.”</div>
 		<ul id="gn-menu" class="gn-menu-main">
 			<li class="gn-trigger">
 				<div class="trigger"><a class="gn-icon gn-icon-menu"><span>Menu</span></a></div>
 				<nav class="gn-menu-wrapper">
 					<div class="gn-scroller">
 						<ul class="gn-menu">
-							<li><a href="#home" class="gn-icon fa-heart">Home</a></li>
+							<li><a href="index.html" class="gn-icon fa-heart">Home</a></li>
 							<li><a href="#story" class="gn-icon fa-comment">The Story</a></li>
 							<li><a href="#about" class="gn-icon fa-users">Special Guests</a></li>
 							<li>
@@ -96,7 +97,7 @@
 		</ul>
 		<div class="container">
 			<div class="header animated tada">
-				<h1>Jason & Sarah</h1>
+                <h1>Davide & Megumi</h1>
 				<h4>ARE GETTING MARRIED</h4>
 				<hr />
 				<h4>Sunday, 24th of May 2015 at “La Pirati”, Vama Veche</h4>
@@ -166,24 +167,24 @@
 	
 	<!--TIMER-->
 	<div id="timer">
-		<div class="container">	
+		<div class="container">
+			<div class="timer-text"><h2>結婚式まで、あと</h2></div>
 			<div id="countdown-bg">
 				<ul id="countdown">
 					<li> <span class="days">00</span>
-					<div class="timeRefDays">days</div>
+					<div class="timeRefDays">日</div>
 					</li>
 					<li> <span class="hours">00</span>
-					<div class="timeRefHours">hours</div>
+					<div class="timeRefHours">時</div>
 					</li>
 					<li> <span class="minutes">00</span>
-					<div class="timeRefMinutes">minutes</div>
+					<div class="timeRefMinutes">分</div>
 					</li>
 					<li> <span class="seconds">00</span>
-					<div class="timeRefSeconds">seconds</div>
+					<div class="timeRefSeconds">秒</div>
 					</li>
 				</ul>
 			</div>
-			<div class="timer-text"><h2>till the happy event!</h2></div>
 		</div><!--end container-->
 	</div><!--end #timer-->
 	<!--END TIMER-->
@@ -634,54 +635,56 @@
 	
 	
 	<!--FORM-->
-	<div id="form">
-		<div class="container">
-			<h3>RSVP</h3>
-			<div class="heart content-style"></div>
-			
-				<div class="row">
-						<div class="col-md-3 rsvp-image"><img src="images/rsvp-left.png" alt="rsvp" /></div><!--end col-md-3-->
-						<div class="col-md-6">
-							<div class="contact-form">
-								<form method="POST" id="contact-form" class="form-horizontal" action="contact-form.php" onSubmit="alert('Thank you for your feedback!');">
-									<div class="form-group">
-									<label>Name</label>
-									<input class="form-control" type="text" name="name" required/>
-									</div>
-									
-									<div class="form-group">
-									<label>Email</label>
-										<input class="form-control" name="email" type="text" required/>
-									</div>
-									
-									<div class="form-group">
-									<label>Are you attending?</label><br />
-										<input id="radio_1" type="radio" name="radio_group" value="yes">
-										<label class="attending-text" for="radio_1">Yes, I am attending</label>
-										<input id="radio_2" type="radio" name="radio_group" value="no">
-										<label class="attending-text" for="radio_2">No, I am not attending</label>
-									</div>
-									
-									<div class="form-group">
-									<label>Message</label>
-										<textarea class="form-control" name="message" rows="6" maxlength="1024" required></textarea>
-									</div>
-									
-									<div class="form-group">
-									<div class="col-lg-offset-2 col-lg-10">
-										<button class="btn btn-default" type="reset" >Reset</button>
-										<input type="hidden" name="save" value="contact-form">
-										<button class="btn btn-success" id="submit" type="submit">Send</button>
-									</div>
-									</div>
-								</form>
-							</div><!--end contact-form-->
-						</div><!--end col-md-6-->
-						<div class="col-md-3 rsvp-image"><img src="images/rsvp-right.png" alt="rsvp" /></div><!--end col-md-3-->
-				</div><!--end row-->
-				
-		</div><!--end container-->
-	</div><!--end #form-->
+    <div id="guestbook">
+        <div id="form">
+            <div class="container">
+                <h3>RSVP</h3>
+                <div class="heart content-style"></div>
+
+                    <div class="row">
+                            <div class="col-md-3 rsvp-image"><img src="images/rsvp-left.png" alt="rsvp" /></div><!--end col-md-3-->
+                            <div class="col-md-6">
+                                <div class="contact-form">
+                                    <form method="POST" id="contact-form" class="form-horizontal" action="contact-form.php" onSubmit="alert('Thank you for your feedback!');">
+                                        <div class="form-group">
+                                        <label>Name</label>
+                                        <input class="form-control" type="text" name="name" required/>
+                                        </div>
+
+                                        <div class="form-group">
+                                        <label>Email</label>
+                                            <input class="form-control" name="email" type="text" required/>
+                                        </div>
+
+                                        <div class="form-group">
+                                        <label>Are you attending?</label><br />
+                                            <input id="radio_1" type="radio" name="radio_group" value="yes">
+                                            <label class="attending-text" for="radio_1">Yes, I am attending</label>
+                                            <input id="radio_2" type="radio" name="radio_group" value="no">
+                                            <label class="attending-text" for="radio_2">No, I am not attending</label>
+                                        </div>
+
+                                        <div class="form-group">
+                                        <label>Message</label>
+                                            <textarea class="form-control" name="message" rows="6" maxlength="1024" required></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                        <div class="col-lg-offset-2 col-lg-10">
+                                            <button class="btn btn-default" type="reset" >Reset</button>
+                                            <input type="hidden" name="save" value="contact-form">
+                                            <button class="btn btn-success" id="submit" type="submit">Send</button>
+                                        </div>
+                                        </div>
+                                    </form>
+                                </div><!--end contact-form-->
+                            </div><!--end col-md-6-->
+                            <div class="col-md-3 rsvp-image"><img src="images/rsvp-right.png" alt="rsvp" /></div><!--end col-md-3-->
+                    </div><!--end row-->
+
+            </div><!--end container-->
+        </div><!--end #form-->
+    </div>
 	<!--END FORM-->
 	
 	
@@ -781,8 +784,9 @@ $(document).ready(function() {
 $(document).ready(function(){
        "use strict";
 		$("#countdown").countdown({
-			date: "24 may 2015 09:00:00", // changes the launch date
-			format: "on"
+			date: "7 march 2015 12:00:00", // changes the launch date
+			format: "on",
+            lang: 'jpn'
 	},
 			
 	function() {

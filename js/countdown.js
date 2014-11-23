@@ -9,7 +9,8 @@
 		//array of custom settings
 		var settings = { 
 			'date': null,
-			'format': null
+			'format': null,
+            'lang': 'eng'
 		};
 
 		//append the settings array to options
@@ -42,10 +43,10 @@
 			
 			//conditional Ss
             /*jshint validthis:true */
-			if (days === 1) { thisEl.find(".timeRefDays").text("day"); } else { thisEl.find(".timeRefDays").text("days"); }
-			if (hours === 1) { thisEl.find(".timeRefHours").text("hour"); } else { thisEl.find(".timeRefHours").text("hours"); }
-			if (minutes === 1) { thisEl.find(".timeRefMinutes").text("minute"); } else { thisEl.find(".timeRefMinutes").text("minutes"); }
-			if (seconds === 1) { thisEl.find(".timeRefSeconds").text("second"); } else { thisEl.find(".timeRefSeconds").text("seconds"); }
+			if (days === 1) { thisEl.find(".timeRefDays").text(getRightLabel("day")); } else { thisEl.find(".timeRefDays").text(getRightLabel("day", true)); }
+			if (hours === 1) { thisEl.find(".timeRefHours").text(getRightLabel("hour")); } else { thisEl.find(".timeRefHours").text(getRightLabel("hour", true)); }
+			if (minutes === 1) { thisEl.find(".timeRefMinutes").text(getRightLabel("minute")); } else { thisEl.find(".timeRefMinutes").text(getRightLabel("minute", true)); }
+			if (seconds === 1) { thisEl.find(".timeRefSeconds").text(getRightLabel("second")); } else { thisEl.find(".timeRefSeconds").text(getRightLabel("second", true)); }
 			
 			//logic for the two_digits ON setting
 			if(settings.format === "on") {
@@ -65,6 +66,49 @@
 				clearInterval(interval); 
 			}
 		}
+
+        function getRightLabel(word, plural) {
+            switch (settings.lang) {
+                case 'eng':
+                    return getEngLabel(word, plural);
+                case 'it':
+                    return getItLabel(word, plural);
+                case 'jpn':
+                    return getJpnLabel(word);
+                default :
+                    return getEngLabel(word, plural);
+            }
+        }
+
+        function getEngLabel(word, plural) {
+            return (plural ? word + 's' : word)
+        }
+
+        function getItLabel(word, plural) {
+            switch (word) {
+                case 'day':
+                    return 'giorn' + (plural ? 'i' : 'o');
+                case 'hour':
+                    return 'or' + (plural ? 'e' : 'a');
+                case 'minute':
+                    return 'minut' + (plural ? 'i' : 'o');
+                case 'second':
+                    return 'second' + (plural ? 'i' : 'o');
+            }
+        }
+
+        function getJpnLabel(word) {
+            switch (word) {
+                case 'day':
+                    return '日';
+                case 'hour':
+                    return '時';
+                case 'minute':
+                    return '分';
+                case 'second':
+                    return '秒';
+            }
+        }
 		
 		//run the function
 		countdown_proc();
