@@ -2,7 +2,7 @@
 
 // check for form submission - if it doesn�t exist then send back to contact form
 if (!isset($_POST["save"]) || $_POST["save"] != "contact-form") {
-header("Location: .html#rsvp"); exit;
+    header("Location: .html#rsvp"); exit;
 }
 
 
@@ -11,15 +11,17 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 $attending = $_POST['radio_group'];
+$location = $_POST['location'];
 
 // write the email content
 $email_content .= "Name: $name\n";
 $email_content .= "Email: $email\n";
 $email_content .= "Message:\n\n$message";
 $email_content .= "Attending:\n\n$attending";
+$email_content .= "Where:\n\n$location";
 
-// send the email
-mail ("contact@ouremail.com", "New Contact Message", $email_content);
+// TODO send the email
+mail ("morridavide@gmail.com", "New Contact Message from NakanoMorri", $email_content);
 
 // send the user back to the form
 //TODO capire per pagine separate

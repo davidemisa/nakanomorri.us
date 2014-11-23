@@ -569,7 +569,7 @@ section::after {
 	padding: 2.5em 0;
 }
 
-#gmap {
+.gmap {
 	height: 180px;
 	width: 98%;
 	margin: 2em 0.8em;
@@ -1307,7 +1307,7 @@ ul#countdown li .timeRefSeconds {
 	-ms-transform: translate3d(0,0,0);
 }
 
-#location {
+.mapLocation {
 	width: 100%;
 	height: 100%;
 }
