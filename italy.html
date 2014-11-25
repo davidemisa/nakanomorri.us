@@ -62,7 +62,7 @@
 							<li>
 								<ul class="gn-submenu">
 									<li><a href="#ceremony" class="gn-icon fa-chevron-right">Cerimonia nuziale</a></li>
-									<li><a href="#party" class="gn-icon fa-chevron-right">Wedding Party</a></li>
+									<li><a href="#party" class="gn-icon fa-chevron-right">Festa nuziale</a></li>
 								</ul>
 							</li>
 							<li><a href="#registry" class="gn-icon fa-gift">Lista nozze</a></li>
@@ -259,7 +259,7 @@
 
 
             <div id="party">
-                <h3>The Wedding Party</h3>
+                <h3>La festa nuziale</h3>
                 <div class="heart content-style"></div>
 
                 <div class="row">
@@ -282,30 +282,31 @@
 
                 <div class="row">
                     <div class="party-text">
+                        <!--TODO scrivere sul menu ecc..-->
                         <p>Sanitas vitae massa ligula. Donec scelerisque rutrum libero tempus posuere. Morbi tristique diam non porttitor aliquet. Morbi gravida bibendum leo, sed porta mauris laoreet in. Duis sed elit mauris. Donec mollis sapien in quam aliquam sodales. Integer mattis leo ac ante suscipit semper. Curabitur vel malesuada augue, non ultrices lacus. Vestibulum id suscipit leo, ac semper lectus. Aenean mollis neque mi, vel eleifend neque vestibulum vel. Mauris orci diam, bibendum eu lobortis.</p>
                     </div>
                 </div><!--end row-->
 
                 <div class="row">
                     <div id="party-carousel">
-                        <div class="item"><img src="http://placehold.it/287x143/D65679/E06485" alt="party"></div>
-                        <div class="item"><img src="http://placehold.it/287x143/D65679/E06485" alt="party"></div>
-                        <div class="item"><img src="http://placehold.it/287x143/D65679/E06485" alt="party"></div>
-                        <div class="item"><img src="http://placehold.it/287x143/D65679/E06485" alt="party"></div>
-                        <div class="item"><img src="http://placehold.it/287x143/D65679/E06485" alt="party"></div>
-                        <div class="item"><img src="http://placehold.it/287x143/D65679/E06485" alt="party"></div>
-                        <div class="item"><img src="http://placehold.it/287x143/D65679/E06485" alt="party"></div>
-                        <div class="item"><img src="http://placehold.it/287x143/D65679/E06485" alt="party"></div>
+                        <div class="item"><img src="images/pics/prua_insegna.jpg" alt="Ristorante Prua"></div>
+                        <div class="item"><img src="images/pics/prua_sala.jpg" alt="Ristorante Prua"></div>
+                        <div class="item"><img src="images/pics/prua_tavolo.jpg" alt="Ristorante Prua"></div>
+                        <div class="item"><img src="images/pics/prua_crostaceo.jpg" alt="Ristorante Prua"></div>
+                        <div class="item"><img src="images/pics/prua_nave.jpg" alt="Ristorante Prua"></div>
+                        <div class="item"><img src="images/pics/darsena_seppia.jpg" alt="La darsena"></div>
+                        <div class="item"><img src="images/pics/darsena_sera.jpg" alt="La darsena"></div>
+                        <div class="item"><img src="images/pics/darsena_tramonto.jpg" alt="La darsena"></div>
                     </div>
                 </div><!--end row-->
 
                 <div class="row">
                     <div class="col-md-6">
                         <div class="party-text">
-                            <p>Utentis laoreet tellus ut nisl porta, nec lobortis leo rutrum. Phasellus varius sapien eget sapien vulputate, vitae aliquet urna commodo. Etiam euismod ipsum vel erat facilisis posuere. Phasellus iaculis felis vel facilisis pretium.</p>
+                            <p>L'esperienza decennale di Fedele porta in questo nuovo locale trendy e dalle linee moderne tutta la tradizione culinaria Romagnola con chef di altissimo livello.</p>
                             <div class="location-data">
                                 <h4>Ristorante "Prua"</h4>
-                                <p>Via TODO<br />
+                                <p>Viale Ortigara 45<br />
                                     Nuova Darsena di Rimini</p>
                             </div>
                         </div>
@@ -746,9 +747,10 @@ window.onload = function () {
 	var styles = [
         {
             featureType: 'water', // set the water color
-            elementType: 'geometry.fill', // apply the color only to the fill
+            elementType: 'geometry',
             stylers: [
-                { color: '#FFF' }
+                { saturation: 40 },
+                { lightness: 40 }
             ]
         },{
             featureType: 'landscape.natural', // set the natural landscape
