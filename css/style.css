@@ -534,7 +534,7 @@ section::after {
 }
 
 #timer {
-	background: url('http://placehold.it/1920x1225/6e6e86/76768E') 50% 0 no-repeat fixed;
+	background: url('../images/pics/anelli.jpg') 50% 0 no-repeat fixed;
 	color: #FFF;
 	width: 100%;
 	height: 410px;
