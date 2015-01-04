@@ -2,8 +2,24 @@
     font-size: 1em;
 }
 
-.longText {
+p {
     font-style: normal;
     font-size: 0.9em;
     text-align: left;
+}
+
+.ceremony-bordered {
+    margin: 5.8em 0.5em 0 0.5em !important;
+}
+
+.party-bordered {
+    margin: 3.8em 0.5em 0 0.5em !important;
+}
+
+.location-data {
+    margin-top: 2em;
+}
+
+.center {
+    text-align: center;
 }
