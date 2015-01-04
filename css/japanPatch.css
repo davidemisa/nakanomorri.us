@@ -1,3 +1,9 @@
 .photostack figcaption h2 {
     font-size: 1em;
 }
+
+.longText {
+    font-style: normal;
+    font-size: 0.9em;
+    text-align: left;
+}
