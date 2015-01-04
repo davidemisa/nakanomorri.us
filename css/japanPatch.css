@@ -23,3 +23,15 @@ p {
 .center {
     text-align: center;
 }
+
+.mailText {
+    text-align: center;
+    margin-top: 5.5em;
+    font-size: 1.5em;
+}
+
+.btn-success {
+    float: none;
+    font-size: 1em;
+    margin-top: 1em;
+}
