@@ -522,42 +522,49 @@
                 <h3>お返事</h3>
                 <div class="heart content-style"></div>
 
+
                     <div class="row">
                             <div class="col-md-3 rsvp-image"><img src="images/rsvp-left.png" alt="rsvp" /></div><!--end col-md-3-->
                             <div class="col-md-6">
                                 <div class="contact-form">
-                                    <form method="POST" id="contact-form" class="form-horizontal" action="contact-form.php" onSubmit="alert('お返事ありがとうございます。');">
-                                        <div class="form-group">
-                                        <label>名前</label>
-                                        <input class="form-control" type="text" name="name" required/>
-                                        </div>
 
-                                        <div class="form-group">
-                                        <label>メールアドレス</label>
-                                            <input class="form-control" name="email" type="text" required/>
-                                        </div>
+									<button class="btn btn-success" type="submit" onclick="window.open('mailto:merupeko@gmail.com?subject=subject&body=body');">
+										送信
+									</button>
 
-                                        <div class="form-group">
-                                        <label>出席しますか？</label><br />
-                                            <input id="radio_1" type="radio" name="radio_group" value="yes">
-                                            <label class="attending-text" for="radio_1">はい。出席します。</label>
-                                            <input id="radio_2" type="radio" name="radio_group" value="no">
-                                            <label class="attending-text" for="radio_2">いいえ。欠席します。</label>
-                                        </div>
+                                    <!--<form method="POST" id="contact-form" class="form-horizontal" action="contact-form.php" onSubmit="alert('お返事ありがとうございます。');">-->
+                                        <!--<div class="form-group">-->
+                                        <!--<label>名前</label>-->
+                                        <!--<input class="form-control" type="text" name="name" required/>-->
+                                        <!--</div>-->
 
-                                        <div class="form-group">
-                                        <label>メッセージ</label>
-                                            <textarea class="form-control" name="message" rows="6" maxlength="1024" required></textarea>
-                                        </div>
+                                        <!--<div class="form-group">-->
+                                        <!--<label>メールアドレス</label>-->
+                                            <!--<input class="form-control" name="email" type="text" required/>-->
+                                        <!--</div>-->
 
-                                        <div class="form-group">
-                                        <div class="col-lg-offset-2 col-lg-10">
-                                            <button class="btn btn-default" type="reset" >キャンセル</button>
-                                            <input type="hidden" name="save" value="contact-form">
-                                            <button class="btn btn-success" id="submit" type="submit">送信</button>
-                                        </div>
-                                        </div>
-                                    </form>
+                                        <!--<div class="form-group">-->
+                                        <!--<label>出席しますか？</label><br />-->
+                                            <!--<input id="radio_1" type="radio" name="radio_group" value="yes">-->
+                                            <!--<label class="attending-text" for="radio_1">はい。出席します。</label>-->
+                                            <!--<input id="radio_2" type="radio" name="radio_group" value="no">-->
+                                            <!--<label class="attending-text" for="radio_2">いいえ。欠席します。</label>-->
+                                        <!--</div>-->
+
+                                        <!--<div class="form-group">-->
+                                        <!--<label>メッセージ</label>-->
+                                            <!--<textarea class="form-control" name="message" rows="6" maxlength="1024" required></textarea>-->
+                                        <!--</div>-->
+
+                                        <!--<div class="form-group">-->
+                                        <!--<div class="col-lg-offset-2 col-lg-10">-->
+                                            <!--<button class="btn btn-default" type="reset" >キャンセル</button>-->
+                                            <!--<input type="hidden" name="save" value="contact-form">-->
+                                            <!--<button class="btn btn-success" id="submit" type="submit">送信</button>-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</form>-->
+
                                 </div><!--end contact-form-->
                             </div><!--end col-md-6-->
                             <div class="col-md-3 rsvp-image"><img src="images/rsvp-right.png" alt="rsvp" /></div><!--end col-md-3-->
