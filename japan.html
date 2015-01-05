@@ -249,7 +249,8 @@
 					<div class="col-md-6">
 						<div class="ceremony-text">
 						<p class="ceremony-bordered">
-							江戸時代には米子城の北の守りとして重んじられ、昔から米子の総鎮守として、一般に「かんださん」の名で親しまれてきました。賀茂神社、天満宮、祇園社などとともに米子で最も古い神社の一つで、天文年間(1532～1554)この場所に鎮座。
+							江戸時代には米子城の北の守りとして重んじられ、昔から米子の総鎮守として、一般に「かんださん」の名で親しまれてきました。
+							賀茂神社、天満宮、祇園社などとともに米子で最も古い神社の一つで、天文年間(1532～1554)この場所に鎮座。
 							商売繁盛をはじめ、ご利益全般とされており、市民の初詣スポットの定番として、毎年多くの参拝客を集めています。<br />
 							勝田山を背景にした社殿はとても壮厳。主祭神は天之忍穂耳命で、伝承では鎌倉時代に境港から弓ヶ浜部にかけて開拓事業を行ったともいわれている、勝田四郎が祀ってあるそうです。
 						</p>
@@ -272,7 +273,8 @@
 					<div class="col-md-6">
 						<div class="party-text">
 							<p>
-								国際結婚だからこそ、日本の伝統美が感じられる神社での挙式を選びました。多くの方にお祝いしていただけると嬉しいです。<br />
+								国際結婚だからこそ、日本の伝統美が感じられる神社での挙式を選びました。
+								３０名ほどの少人数ですので、ご都合のよい方はぜひ神前式にもご参列ください。
 								着物での参列も大歓迎です！
 							</p>
 							<div class="location-data">
@@ -369,10 +371,11 @@
 			
 				<div class="album-text">
 					<p>
-						Aiutateci a costruire il vostro reportage del matrimonio! Tramite WedPics potete caricare le foto del nostro lieto evento direttamente
-						dal vostro smartphone utilizzando l'app, o, successivamente, dal vostro computer di casa sul sito web.
-						WedPics creerà automaticamente un album condiviso di tutte le foto caricate dagli ospiti a cui potrete sempre accedere.
-						Qui di seguito i link al sito, al download delle app e il wedding ID che vi serve per accedere all'album. Grazie!!
+						わたしたちのアルバム作りを手伝ってください！
+						スマートフォンでWedPicsのアプリケーションを使うと、直接写真をアップロードできます。また、パソコンからも、
+						WedPicsのサイトから簡単に実行できます。
+						WedPicsは、自動的にアルバムを作成し、みなさんからアップロードしていただいた写真をサイト上で共有することができます。
+						以下のリンクから、アクセスしてみてくださいね。
 					</p>
 				</div>
 
@@ -394,7 +397,7 @@
 
 				<div class="album-text">
 					<p>
-						In attesa dell'album di matrimonio, ecco un piccolo assaggio di alcuni nostri momenti felici!
+						結婚式のアルバムができるまでの間は、わたしたち２人が過ごしてきたハッピーな時間を少し見てみてください♡
 					</p>
 				</div>
 
@@ -561,7 +564,7 @@
                             <div class="col-md-6">
                                 <div class="contact-form">
 
-                                    <form class="form-horizontal">
+                                    <form class="form-horizontal" id="sendMailForm">
 
 										<div class="mailText">
                                         	<label>返信ボタンをクリックして、メールでお返事ください</label>
@@ -572,39 +575,6 @@
 										</div>
 
 									</form>
-
-                                    <!--<form method="POST" id="contact-form" class="form-horizontal" action="contact-form.php" onSubmit="alert('お返事ありがとうございます。');">-->
-                                        <!--<div class="form-group">-->
-                                        <!--<label>名前</label>-->
-                                        <!--<input class="form-control" type="text" name="name" required/>-->
-                                        <!--</div>-->
-
-                                        <!--<div class="form-group">-->
-                                        <!--<label>メールアドレス</label>-->
-                                            <!--<input class="form-control" name="email" type="text" required/>-->
-                                        <!--</div>-->
-
-                                        <!--<div class="form-group">-->
-                                        <!--<label>出席しますか？</label><br />-->
-                                            <!--<input id="radio_1" type="radio" name="radio_group" value="yes">-->
-                                            <!--<label class="attending-text" for="radio_1">はい。出席します。</label>-->
-                                            <!--<input id="radio_2" type="radio" name="radio_group" value="no">-->
-                                            <!--<label class="attending-text" for="radio_2">いいえ。欠席します。</label>-->
-                                        <!--</div>-->
-
-                                        <!--<div class="form-group">-->
-                                        <!--<label>メッセージ</label>-->
-                                            <!--<textarea class="form-control" name="message" rows="6" maxlength="1024" required></textarea>-->
-                                        <!--</div>-->
-
-                                        <!--<div class="form-group">-->
-                                        <!--<div class="col-lg-offset-2 col-lg-10">-->
-                                            <!--<button class="btn btn-default" type="reset" >キャンセル</button>-->
-                                            <!--<input type="hidden" name="save" value="contact-form">-->
-                                            <!--<button class="btn btn-success" id="submit" type="submit">送信</button>-->
-                                        <!--</div>-->
-                                        <!--</div>-->
-                                    <!--</form>-->
 
                                 </div><!--end contact-form-->
                             </div><!--end col-md-6-->
@@ -682,12 +652,16 @@ function sendEmail() {
 	var to = "merupeko@gmail.com";
 	var subject = "結婚式出欠確認";
 	var body = "中ノ森めぐみ　宛、\n\n" +
-			   "お名前：　\n" +
-			   "ご連絡先：　\n" +
-			   "結婚式に出席していただけますか？：　\n" +
-			   "披露宴に出席していただけますか？：　\n" +
-			   "☆その他、披露宴のメニューや交通手段の相談など、以下に何でもお書き下さい。";
-	window.open('mailto:'+to+'?subject='+subject+'&body='+encodeURIComponent(body));
+			"お名前：　\n" +
+			"ご連絡先：　\n" +
+			"結婚式に出席していただけますか？：　\n" +
+			"披露宴に出席していただけますか？：　\n" +
+			"☆その他、披露宴のメニューや交通手段の相談など、以下に何でもお書き下さい。";
+	var mailTo = 'mailto:'+to+'?subject='+subject+'&body='+encodeURIComponent(body);
+//	$('#sendMailForm').attr('action', mailTo); TODO vedere perché non funziona
+	window.open(mailTo);
+}
+</script>
 }
 
 
