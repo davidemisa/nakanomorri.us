@@ -573,8 +573,10 @@
 								<div class="mailText">
 									<label>返信ボタンをクリックして、メールでお返事ください</label>
 
-									<button class="btn btn-success" type="submit" onclick="sendEmail();">
-										返信
+									<button class="btn btn-success">
+										<a id="sendMailButton" >
+											返信
+										</a>
 									</button>
 								</div>
 
@@ -652,7 +654,7 @@
 	/*jshint -W031 */
 	/*exported jQuery */
 
-	function sendEmail() {
+	function buildEmail() {
 		var to = "merupeko@gmail.com";
 		var subject = "結婚式出欠確認";
 		var body = "中ノ森めぐみ　宛、\n\n" +
@@ -663,9 +665,12 @@
 				"勝田神社～大山レークホテル間の無料送迎バスはご利用されますか？：　\n" +
 				"☆その他、披露宴のメニューや交通手段の相談など、以下に何でもお書き下さい。";
 		var mailTo = 'mailto:'+to+'?subject='+subject+'&body='+encodeURIComponent(body);
-//		$('#sendMailForm').attr('action', mailTo); TODO vedere perché non funziona
-		window.open(mailTo);
+		$('#sendMailButton').attr('href', mailTo);
 	}
+
+	$(document).ready(function() {
+		buildEmail();
+	});
 
 	/* -- SLIDESHOW -- */
 	$(function() {

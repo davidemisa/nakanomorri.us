@@ -15,6 +15,7 @@
 	<!-- The Stylesheets -->
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link rel="stylesheet" href="css/italyPatch.css" type="text/css" />
 	<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" />
 	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	<link rel="stylesheet" media="screen" href="css/mobile.css" type="text/css" />
@@ -564,10 +565,47 @@
 		</div><!--end container-->
 	</div><!--end #rsvp-->
 	<!--END RSVP-->
-	
-	
-	
+
+
+
 	<!--FORM-->
+	<div id="guestbook">
+		<div id="form">
+			<div class="container">
+				<h3>R.S.V.P.</h3>
+				<div class="heart content-style"></div>
+
+				<div class="row">
+					<div class="col-md-3 rsvp-image"><img src="images/rsvp-left.png" alt="rsvp" /></div><!--end col-md-3-->
+					<div class="col-md-6">
+						<div class="contact-form">
+
+							<form class="form-horizontal">
+
+								<div class="mailText">
+									<label>Clicca sul pulsante <i>Rispondi</i> per inviare una e-mail di risposta. Grazie!</label>
+
+									<button class="btn btn-success">
+										<a id="sendMailButton" >
+											Rispondi
+										</a>
+									</button>
+								</div>
+
+							</form>
+
+						</div><!--end contact-form-->
+					</div><!--end col-md-6-->
+					<div class="col-md-3 rsvp-image"><img src="images/rsvp-right.png" alt="rsvp" /></div><!--end col-md-3-->
+				</div><!--end row-->
+
+			</div><!--end container-->
+		</div><!--end #form-->
+	</div>
+	<!--END FORM-->
+
+
+	<!--OLD FORM
 	<div id="guestbook">
         <div id="form">
             <div class="container">
@@ -575,10 +613,10 @@
                 <div class="heart content-style"></div>
 
                     <div class="row">
-                            <div class="col-md-3 rsvp-image"><img src="images/rsvp-left.png" alt="rsvp" /></div><!--end col-md-3-->
+                            <div class="col-md-3 rsvp-image"><img src="images/rsvp-left.png" alt="rsvp" /></div>
                             <div class="col-md-6">
                                 <div class="contact-form">
-                                    <!--TODO alert più carina-->
+                                    <!--TODO alert più carina
                                     <form method="POST" id="contact-form" class="form-horizontal" action="contact-form.php" onSubmit="alert('Grazie per aver risposto!');">
                                         <input class="form-control" type="hidden" name="location" value="Italy" required/>
                                         <div class="form-group">
@@ -612,16 +650,16 @@
                                         </div>
                                         </div>
                                     </form>
-                                </div><!--end contact-form-->
-                            </div><!--end col-md-6-->
-                            <div class="col-md-3 rsvp-image"><img src="images/rsvp-right.png" alt="rsvp" /></div><!--end col-md-3-->
-                    </div><!--end row-->
+                                </div>
+                            </div>
+                            <div class="col-md-3 rsvp-image"><img src="images/rsvp-right.png" alt="rsvp" /></div>
+                    </div>
 
-            </div><!--end container-->
-        </div><!--end #form-->
+            </div>
+        </div>
     </div>
 	<!--END FORM-->
-	
+
 	
 	
 	<!--FOOTER-->
@@ -685,10 +723,27 @@ jQuery('body').scrollspy({ target: '#gn-menu' });
 /*exported jQuery */
 
 
+function buildEmail() {
+	var to = "morridavide@gmail.com";
+	var subject = "Partecipazione matrimonio in Italia";
+	var body = "Caro Davide,\n\n" +
+			"Di seguito la risposta all'invito di matrimonio che mi avete recapitato. \n\n" +
+			"Nome: \n" +
+			"Parteciperai alla festa di matrimonio?: \n" +
+			"Chi verrà con te?: \n" +
+			"Se desideri avere altre informazioni o hai qualche richiesta, indicacelo per favore.\n";
+	var mailTo = 'mailto:'+to+'?subject='+subject+'&body='+encodeURIComponent(body);
+	$('#sendMailButton').attr('href', mailTo);
+}
+
+$(document).ready(function() {
+	buildEmail();
+});
+
 /* -- SLIDESHOW -- */
 $(function() {
 	cbpBGSlideshow.init();
-});	
+});
 
 
 /* -- PARALLAX EFFECT SETTINGS -- */
