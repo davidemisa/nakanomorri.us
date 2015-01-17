@@ -576,7 +576,7 @@ section::after {
 }
 
 #registry {
-	background: url('http://placehold.it/1920x1360/6e6e86/76768E') 50% 0 no-repeat fixed;
+	background: url('../images/registry-ribbon.png') 50% 0 no-repeat fixed;
 	color: #FFF;
 	height: 180px;
 	width: 100%;
